@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Austin R | Software Engineer</title>
+<meta name="description" content="Austin R is a final-year B.Tech CS student in Bengaluru building full-stack apps, REST APIs and data monitoring tools.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF1F4;--surface:#F8FAFB;--ink:#16213A;--muted:#4F5B75;--line:#C9D2DC;--accent:#2756E8;--ok:#1E7A55;--warn:#9A5B06;--bad:#B93232;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1626;--surface:#151E33;--ink:#E6ECF7;--muted:#9AA7C0;--line:#2A3652;--accent:#8CA8FF;--ok:#4CC38F;--warn:#E8A93C;--bad:#FF7A7A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1626;--surface:#151E33;--ink:#E6ECF7;--muted:#9AA7C0;--line:#2A3652;--accent:#8CA8FF;--ok:#4CC38F;--warn:#E8A93C;--bad:#FF7A7A;color-scheme:dark}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+header.top strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:2.5rem;align-items:center;padding:2.5rem 0 3.5rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700;letter-spacing:-.02em}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:32rem;margin:1.25rem 0 1.5rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.lab{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+.lab h2{font-size:1.1rem;margin-bottom:.25rem}
+.lab .sub{margin:0 0 .75rem;color:var(--muted);font-size:.95rem}
+svg.chart{width:100%;height:auto;display:block}
+.ctl{display:grid;grid-template-columns:7.5rem 1fr 3rem;gap:.5rem;align-items:center;margin:.35rem 0;font-size:.95rem}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.readout{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);margin-top:.75rem;padding-top:.75rem}
+.readout b{font:700 1.6rem "Bricolage Grotesque",sans-serif}
+.state{font-weight:600}
+[data-state=stable]{color:var(--ok)}[data-state=watch]{color:var(--warn)}[data-state=drift]{color:var(--bad)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:1.25rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p{max-width:38rem;margin:0 0 1rem}
+.facts{margin:0;padding:0;list-style:none}
+.facts li{padding:.6rem 0;border-bottom:1px solid var(--line)}
+.facts li:last-child{border:0}
+.proj{display:grid;grid-template-columns:1fr 1.3fr;gap:2.5rem;margin-bottom:2.5rem}
+.proj h3{font-size:1.5rem;margin-bottom:.4rem}
+.stack{color:var(--muted);font-size:.95rem;margin:0}
+.proj ul{margin:0;padding-left:1.1rem}
+.proj li{margin-bottom:.55rem}
+.skills dt{font-weight:600;margin-top:1rem}
+.skills dd{margin:.1rem 0 0;color:var(--muted)}
+footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
+footer p{margin:.25rem 0}
+.big{font:700 clamp(1.5rem,4vw,2.4rem) "Bricolage Grotesque",sans-serif;margin-bottom:1rem}
+@media (max-width:760px){.hero,.two,.proj{grid-template-columns:1fr;gap:1.5rem}.ctl{grid-template-columns:6.5rem 1fr 2.5rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><strong>Austin R</strong>
+<nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="https://github.com/austinajay" rel="noopener">GitHub</a><a href="#contact">Contact</a></nav></header>
+
+<div class="hero">
+<div>
+<h1>I build software that notices when data goes wrong.</h1>
+<p class="lead">Final-year Computer Science student in Bengaluru. I build full-stack apps and REST APIs in Python and TypeScript, and I like tests, clear docs and fixing the root cause.</p>
+<div class="btns"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="https://github.com/austinajay" rel="noopener">GitHub</a><a class="btn" href="mailto:austinajay07@gmail.com">Email me</a></div>
+</div>
+<div class="lab" role="group" aria-labelledby="labh">
+<h2 id="labh">Try a drift check</h2>
+<p class="sub">The same Population Stability Index (PSI) check I use in DataSentinel. Move the sliders to change the live data.</p>
+<svg class="chart" id="chart" viewBox="0 0 480 190" role="img" aria-label="Histogram comparing baseline data with live data"></svg>
+<div class="ctl"><label for="shift">Mean shift</label><input id="shift" type="range" min="0" max="2" step="0.05" value="0.4"><output id="shiftv">0.40</output></div>
+<div class="ctl"><label for="spread">Spread</label><input id="spread" type="range" min="0.5" max="2" step="0.05" value="1"><output id="spreadv">1.00</output></div>
+<div class="readout"><span>PSI <b id="psi">0.00</b></span><span class="state" id="state" data-state="stable">Stable</span></div>
+</div>
+</div>
+</div>
+
+<section id="about" class="about"><div class="wrap two">
+<div><h2>About</h2>
+<p>I’m a final-year B.Tech student at Jain University (2027, CGPA 7.5/10). I enjoy the parts of software that keep it trustworthy: validation, monitoring, testing and good documentation.</p>
+<p>I work mostly in Python, TypeScript, Java and SQL, and I’m looking for a software engineer role where I can ship real features and learn from code reviews.</p></div>
+<ul class="facts" aria-label="Quick facts"><li>Based in Bengaluru, India</li><li>Graduating in 2027, no active backlogs</li><li>Git, GitHub Actions and Docker in my daily workflow</li><li>Available for software engineering roles</li></ul>
+</div></section>
+
+<section id="projects"><div class="wrap"><h2>Projects</h2>
+<article class="proj"><div><h3>DataSentinel</h3><p class="stack">Data quality and observability platform. Python, FastAPI, React, TypeScript, SQL, SQLite, GitHub Actions.</p></div>
+<ul><li>Built a full-stack web app with a React and TypeScript front end, a FastAPI REST back end and a SQLite database to monitor data quality across datasets.</li>
+<li>Wrote REST APIs for monitoring, incident tracking and resolution, including severity classification and status updates.</li>
+<li>Implemented PSI and Kolmogorov-Smirnov drift detection with missing-value and categorical checks, and designed test cases for edge conditions.</li>
+<li>Built a React dashboard with Recharts showing live incident statistics and severity reports, and documented it for technical and non-technical users.</li></ul></article>
+<article class="proj"><div><h3>Bitcoin MLOps Pipeline</h3><p class="stack">Automated forecasting and monitoring. Python, TensorFlow/Keras, FastAPI, Streamlit, Pandas, Docker.</p></div>
+<ul><li>Automated daily data ingestion and feature engineering, computing 5+ technical indicators for a Keras prediction model.</li>
+<li>Delivered a FastAPI service and a Streamlit dashboard for real-time model monitoring.</li>
+<li>Drift detection triggers retraining automatically when validation accuracy drops below 65%.</li></ul></article>
+</div></section>
+
+<section id="skills"><div class="wrap"><h2>Skills</h2>
+<dl class="skills two">
+<div><dt>Languages</dt><dd>Python, TypeScript, JavaScript, Java, SQL, HTML5</dd>
+<dt>Backend and web</dt><dd>REST APIs, FastAPI, React, client-server architecture, Recharts, Streamlit</dd>
+<dt>Databases</dt><dd>PostgreSQL, SQLite, database design, data validation</dd></div>
+<div><dt>Engineering practices</dt><dd>Object-oriented programming, data structures and algorithms, test case design, debugging, root cause analysis, technical documentation</dd>
+<dt>Tools</dt><dd>Git, GitHub, GitHub Actions (CI/CD), Docker</dd>
+<dt>Data and AI</dt><dd>Pandas, NumPy, SciPy, TensorFlow/Keras, PyTorch, spaCy, drift detection</dd></div>
+</dl></div></section>
+
+<section id="education"><div class="wrap"><h2>Education</h2>
+<p><strong>B.Tech in Computer Science and Engineering</strong>, Jain University, Bengaluru (2023 to 2027). CGPA 7.5/10.</p>
+<p style="color:var(--muted)">Certifications: Deep Learning (Simplilearn SkillUP, Nov 2025), Computer Networking (Illinois Tech via Coursera, Jan 2025), Data Literacy (LinkedIn Learning, Mar 2026).</p>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+<p class="big">Let’s talk about your next engineering hire.</p>
+<p><a href="mailto:austinajay07@gmail.com">austinajay07@gmail.com</a></p>
+<p><a href="tel:+916363222630">+91 6363222630</a></p>
+<p><a href="https://github.com/austinajay" rel="noopener">https://github.com/austinajay</a></p>
+</div></footer>
+
+<script>
+(function(){
+function erf(x){var s=x<0?-1:1;x=Math.abs(x);var t=1/(1+0.3275911*x);var y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return s*y}
+function cdf(x,m,s){return .5*(1+erf((x-m)/(s*Math.SQRT2)))}
+var edges=[];for(var i=-4;i<=4;i+=.5)edges.push(i);
+function bins(m,s){var p=[];for(var i=0;i<edges.length-1;i++){var lo=i===0?-Infinity:edges[i],hi=i===edges.length-2?Infinity:edges[i+1];
+p.push((hi===Infinity?1:cdf(hi,m,s))-(lo===-Infinity?0:cdf(lo,m,s)))}return p}
+var base=bins(0,1),svg=document.getElementById('chart');
+function draw(){
+var sh=+document.getElementById('shift').value,sp=+document.getElementById('spread').value;
+document.getElementById('shiftv').textContent=sh.toFixed(2);document.getElementById('spreadv').textContent=sp.toFixed(2);
+var cur=bins(sh,sp),psi=0,e=1e-4;
+for(var i=0;i<base.length;i++){var a=Math.max(cur[i],e),b=Math.max(base[i],e);psi+=(a-b)*Math.log(a/b)}
+var W=480,H=190,pad=18,bw=(W-2*pad)/base.length,max=.32,h=H-34,out='';
+out+='<line x1="'+pad+'" y1="'+(h+6)+'" x2="'+(W-pad)+'" y2="'+(h+6)+'" stroke="var(--line)"/>';
+for(var i=0;i<base.length;i++){var x=pad+i*bw,hc=Math.min(cur[i]/max,1)*h,hb=Math.min(base[i]/max,1)*h;
+out+='<rect x="'+(x+1)+'" y="'+(h+6-hc)+'" width="'+(bw-2)+'" height="'+hc+'" fill="var(--accent)" opacity=".55"/>';
+out+='<rect x="'+(x+1)+'" y="'+(h+6-hb)+'" width="'+(bw-2)+'" height="'+hb+'" fill="none" stroke="var(--ink)" stroke-width="1.5"/>'}
+out+='<text x="'+pad+'" y="'+(H-4)+'" font-size="12" fill="var(--muted)">Outlined bars: baseline. Filled bars: live data.</text>';
+svg.innerHTML=out;
+document.getElementById('psi').textContent=psi.toFixed(2);
+var st=document.getElementById('state'),k=psi<.1?'stable':psi<.25?'watch':'drift';
+st.dataset.state=k;st.textContent=k==='stable'?'Stable':k==='watch'?'Watch closely':'Drift detected'}
+document.getElementById('shift').addEventListener('input',draw);document.getElementById('spread').addEventListener('input',draw);draw();
+})();
+</script>
+</body>
+</html>
